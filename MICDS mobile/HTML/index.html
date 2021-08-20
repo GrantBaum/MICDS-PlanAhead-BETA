@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanAhead</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body background="https://tse4.mm.bing.net/th/id/OIP.2cYY8-xDm6UppNIxchgjtQHaEo?w=254&h=180&c=7&o=5&dpr=1.5&pid=1.7">
+    <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="links.html">Important Links</a></li> 
+        <li><a href="lunch.html">Lunch</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="sports.html">Sports</a></li>
+    <!--HEAD TEXT AND LOGO-->
+    <d><img src="https://mymicds.net/assets/logo/logo.svg" alt="MICDS logo" class="center"></d>
+   <j><h1>PlanAhead</h1></j>
+   <j><p>By the MyMICDS DevTeam</p></j>
+    <style>
+    j {
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0px;
+        text-decoration: underline;
+    }
+    </style>
+    <style>
+      img {
+          height: 175px;
+          width: 175px;
+          text-align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+    </style>
+    <!--END OF HEAD TEXT AND LOGO-->
+    <!--DIGITAL CLOCK-->
+    <b><div id="clockbox"></div>
+
+    <script type="text/javascript">
+    var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+    
+    function GetClock(){
+    var d=new Date();
+    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+    var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+    if(nhour==0){ap=" AM";nhour=12;}
+    else if(nhour<12){ap=" AM";}
+    else if(nhour==12){ap=" PM";}
+    else if(nhour>12){ap=" PM";nhour-=12;}
+    
+    if(nmin<=9) nmin="0"+nmin;
+    
+    var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+ap+"";
+    document.getElementById('clockbox').innerHTML=clocktext;
+    }
+    
+    GetClock();
+    setInterval(GetClock,1000);
+    </script>
+    
+    </b>
+      <style>
+          b {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 20px;
+          text-align: center;
+          margin: 5px;
+          }
+      </style>
+      <script>
+ 
+    </script>
+      <!--END OF DIGITAL CLOCK-->
+      <script>
+      const today = new Date()
+      const tomorrow = new Date(today)
+      tomorrow.setDate(tomorrow.getDate() + 1)
+    </script>
+      <!--START OF WEATHER-->
+      <div id="cont_0ff3861ff0ccd85a204c852d94ba46d5"><script type="text/javascript" async src="https://www.theweather.com/wid_loader/0ff3861ff0ccd85a204c852d94ba46d5"></script></div>                      
+<!--CURRENT WEATHER END-->
+
+ <!---MAP TO MICDS-->
+ <div style="text-align: center;"></p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2742.6651398429176!2d-90.39874793265395!3d38.658281164221236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df3336887ab0e9%3A0xbfde9297a76cee54!2sMICDS%20(Mary%20Institute%20and%20Saint%20Louis%20Country%20Day%20School)!5e0!3m2!1sen!2sus!4v1629412443453!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+ <!--END OF MAP-->
+
+</body>
+</html>
